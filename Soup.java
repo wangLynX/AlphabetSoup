@@ -1,3 +1,5 @@
+//Madelyn Wang 
+
 public class Soup {
     //these are instance variables
     private String letters;
@@ -44,7 +46,7 @@ public class Soup {
 
     //Use Math.random() to get a random character from the letters string and return it.
     public char randomLetter(){
-      letters = "dgfdgsheworderyretrwe";
+      
        int rand = (int) (Math.random () *letters.length()) ;
        
        char a = letters.charAt(rand);
@@ -58,7 +60,8 @@ public class Soup {
     //returns the letters currently stored with the company name placed directly in the center of all
     //the letters
     public String companyCentered(){
-        letters = letters.substring(0, letters.length()/2) + company + letters.substring(letters.length()/2, letters.length());
+    
+        letters = letters.substring(0, (int)letters.length()/2) + company + letters.substring((int)letters.length()/2, letters.length());
         return letters;
         
 
@@ -78,7 +81,6 @@ public class Soup {
 
     //should remove "num" letters from a random spot in the string letters. You may assume num never exceeds the length of the string.
     public void removeSome(int num){
-        letters = "2q32q3q3";
  System.out.println(num);
  int randomVal =(int) (Math.random()*num);
  if(randomVal<letters.length()){
@@ -100,9 +102,3 @@ public class Soup {
         }
     }
     }
-}
-
-
-
-
-
