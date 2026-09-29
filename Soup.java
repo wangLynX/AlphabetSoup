@@ -81,8 +81,9 @@ public class Soup {
         letters = "2q32q3q3";
  System.out.println(num);
  int randomVal =(int) (Math.random()*num);
- letters = letters.substring(randomVal, randomVal+1);
-
+ if(randomVal<letters.length()){
+ letters = letters.substring(0,randomVal)+letters.substring(randomVal+1,letters.length());
+ }
 
     }
 
@@ -92,8 +93,12 @@ public class Soup {
        letters = "bdawiudhuiwordsdfgsf";
         int wordLoc = letters.indexOf("word");
         if(wordLoc>-1){
+            if(wordLoc+5<letters.length()){
         letters = letters.substring(0,wordLoc) +letters.substring(wordLoc+5,letters.length());
+        } else 
+            letters = letters.substring(0,wordLoc) +letters.substring(wordLoc+5);
         }
+    }
     }
 }
 
