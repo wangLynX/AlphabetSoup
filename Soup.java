@@ -36,7 +36,8 @@ public class Soup {
 //below are the functions you'll be writing.
 
 
-    //adds a word to the pool of letters known as "letters"
+       //precondition: letters string
+    //postcondition: letters string with word added
     public void add(String word){
          letters = letters + word;
     }
@@ -44,7 +45,8 @@ public class Soup {
 
 
 
-    //Use Math.random() to get a random character from the letters string and return it.
+ //precondition: letters string
+    //postcondition: random character from letters string
     public char randomLetter(){
       
        int rand = (int) (Math.random () *letters.length()) ;
@@ -57,8 +59,8 @@ public class Soup {
 
 
 
-    //returns the letters currently stored with the company name placed directly in the center of all
-    //the letters
+    //precondition: letters string
+    //postcondition: letters string with company in the middle
     public String companyCentered(){
     
         letters = letters.substring(0, (int)letters.length()/2) + company + letters.substring((int)letters.length()/2, letters.length());
@@ -70,11 +72,11 @@ public class Soup {
 
 
 
-    //should remove the first available vowel from letters. If there are no vowels this method has no effect.
+    //precondition: letters string
+    //postcondition: letters string without vowels
     public void removeFirstVowel(){
- 
-
-
+//bingus 
+//https://static.wikia.nocookie.net/duckpond/images/7/79/Bongos.png/revision/latest/thumbnail/width/360/height/450?cb=20210112004529
        letters = letters.replaceFirst("[aeiouAEIOU]","");
     }
 
@@ -90,7 +92,8 @@ public class Soup {
     }
 
 
-    //should remove the word "word" from the string letters. If the word is not found in letters then it does nothing.
+       //precondition: letters string
+    //postcondition: letters string without "word"
     public void removeWord(String word){
        letters = "bdawiudhuiwordsdfgsf";
         int wordLoc = letters.indexOf("word");
