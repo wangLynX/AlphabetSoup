@@ -79,7 +79,7 @@ public class Soup {
 //https://static.wikia.nocookie.net/duckpond/images/7/79/Bongos.png/revision/latest/thumbnail/width/360/height/450?cb=20210112004529
        letters = letters.replaceFirst("[aeiouAEIOU]","");
     }
-
+ 
 
     //should remove "num" letters from a random spot in the string letters. You may assume num never exceeds the length of the string.
     public void removeSome(int num){
@@ -95,7 +95,7 @@ public class Soup {
        //precondition: letters string
     //postcondition: letters string without "word"
     public void removeWord(String word){
-       letters = "bdawiudhuiwordsdfgsf";
+       
         int wordLoc = letters.indexOf("word");
         if(wordLoc>-1){
             if(wordLoc+5<letters.length()){
