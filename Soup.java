@@ -40,6 +40,7 @@ public class Soup {
     //postcondition: letters string with word added
     public void add(String word){
          letters = letters + word;
+          
     }
 
 
@@ -78,6 +79,7 @@ public class Soup {
 //bingus 
 //https://static.wikia.nocookie.net/duckpond/images/7/79/Bongos.png/revision/latest/thumbnail/width/360/height/450?cb=20210112004529
        letters = letters.replaceFirst("[aeiouAEIOU]","");
+          
     }
  
 
@@ -88,7 +90,7 @@ public class Soup {
  if(randomVal<letters.length()){
  letters = letters.substring(0,randomVal)+letters.substring(randomVal+1,letters.length());
  }
-
+  return letters;
     }
 
 
@@ -104,4 +106,5 @@ public class Soup {
             letters = letters.substring(0,wordLoc) +letters.substring(wordLoc+5);
         }
     }
+    return letters;
     }
