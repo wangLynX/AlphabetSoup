@@ -1,5 +1,7 @@
 //Madelyn Wang 
-
+//Modifies the string letters based on input from the user.
+//pre condition: letters string
+//post condition: letters strings modifies based on user input
 public class Soup {
     //these are instance variables
     private String letters;
@@ -82,15 +84,16 @@ public class Soup {
           
     }
  
-
+//precondition: letters string
+    //postcondition: letters string without random amount of numbers
     //should remove "num" letters from a random spot in the string letters. You may assume num never exceeds the length of the string.
     public void removeSome(int num){
  System.out.println(num);
  int randomVal =(int) (Math.random()*num);
  if(randomVal<letters.length()){
- letters = letters.substring(0,randomVal)+letters.substring(randomVal+1,letters.length());
+ letters = letters.substring(0,randomVal)+letters.substring(num,letters.length());
  }
-  return letters;
+ 
     }
 
 
@@ -101,10 +104,10 @@ public class Soup {
         int wordLoc = letters.indexOf("word");
         if(wordLoc>-1){
             if(wordLoc+5<letters.length()){
-        letters = letters.substring(0,wordLoc) +letters.substring(wordLoc+5,letters.length());
+        letters = letters.substring(0,wordLoc) +letters.substring(wordLoc+1,letters.length());
         } else 
-            letters = letters.substring(0,wordLoc) +letters.substring(wordLoc+5);
+            letters = letters.substring(0,wordLoc) +letters.substring(wordLoc+1);
         }
     }
-    return letters;
+    
     }
