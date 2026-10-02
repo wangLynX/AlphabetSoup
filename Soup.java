@@ -1,7 +1,6 @@
 //Madelyn Wang 
 //Modifies the string letters based on input from the user.
-//pre condition: letters string
-//post condition: letters strings modifies based on user input
+
 public class Soup {
     //these are instance variables
     private String letters;
@@ -101,7 +100,7 @@ public class Soup {
     //postcondition: letters string without "word"
     public void removeWord(String word){
        
-        int wordLoc = letters.indexOf("word");
+        int wordLoc = letters.indexOf(word);
         if(wordLoc>-1){
             if(wordLoc+5<letters.length()){
         letters = letters.substring(0,wordLoc) +letters.substring(wordLoc+1,letters.length());
