@@ -89,10 +89,10 @@ public class Soup {
     //should remove "num" letters from a random spot in the string letters. You may assume num never exceeds the length of the string.
     public void removeSome(int num){
  System.out.println(num);
- int randomVal =(int) (Math.random()*num);
- if(randomVal<letters.length()){
- letters = letters.substring(0,randomVal)+letters.substring(num,letters.length());
- }
+ int randomVal =(int) (Math.random()*letters.length());
+ 
+ letters = letters.substring(0,randomVal)+letters.substring(randomVal+num,letters.length());
+ 
  
     }
 
